@@ -333,6 +333,11 @@ document.getElementById('page-range').addEventListener('change', () => {
     allowObserverUpdates = false;
     scrolling(pageNumber);
     document.getElementById('page_num').textContent = pageNumber;
+
+    // setTimeout(() => {
+    //     allowObserverUpdates = true;
+    // }, 200);
+    getCurrentPage();
     
 });
 document.getElementById('bookmark').addEventListener('click',addBookmark);
