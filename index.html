@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookReader</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Bibliophile</h1>
+            <label for="file-input" class="file-input-label">Upload PDF</label>
+            <input type="file" accept=".pdf" id="file-input" />
+        </div>
+        <div class="bookmarks-container">
+            <select id="bookmarks-list">
+                <option>Show Bookmarks</option>
+            </select>
+        </div>
+        <div class="prev-next">
+            <button id="prev"> ◀ </button>
+            <input type="number" id="page-range" min="1" value="1" />
+            <button id="next">▶</button>
+            &nbsp; &nbsp;
+            <span><span id="page_num">0</span> / <span id="page_count">0</span></span>
+            
+            <button id="show-notes-btn">📒</button>
+        </div>
+    </header>
+    
+    
+    <main class="main-container">
+        <!-- <div id="desktop-bookmarks-container">
+            <h1>Bookmarks</h1>
+            <p id="bookmark5">No Bookmarks Yet</p>
+        </div> -->
+        <button id="bookmark">☆</button>
+        <div class="file-render-container" id="file-render-container"><canvas id="file-render"></canvas></div>
+        <div class="side-bar">
+            <h2>Notes</h2>
+            <!-- <hr/> -->
+            <div id="add-note-container">
+                <textarea cols="10" rows="3" id="note-textarea" placeholder="save notes here"></textarea>
+                <button id="save-note-btn">SAVE</button>
+            </div>
+            <div id="notes-container">
+                <p>No notes yet :/</p>
+            </div>
+        </div>
+    </main>
+    <!-- <script src="https://cdnjs.com/libraries/pdf.js" type="module"></script> -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.7.570/pdf.min.js" integrity="sha512-g4FwCPWM/fZB1Eie86ZwKjOP+yBIxSBM/b2gQAiSVqCgkyvZ0XxYPDEcN2qqaKKEvK6a05+IPL1raO96RrhYDQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./script.js" ></script>
+</body>
+</html>
